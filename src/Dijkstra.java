@@ -42,4 +42,17 @@ public class Dijkstra {
         return index;
     }
 
+    public static void main(String[] args) {
+        int[][] graph = {
+                {0,7,INF, INF, 3, 10, INF},
+                {7,0,3,10, 2,6,INF},
+                {INF, 4,0,2, INF,INF,INF}
+        };
+        Dijkstra dijkstra = new Dijkstra(graph);
+        int[] distance = dijkstra.find(0);
+        for (int i : distance){
+            System.out.printf("%d, ", i);
+        }
+        System.out.println();
+    }
 }
